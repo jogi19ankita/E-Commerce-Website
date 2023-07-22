@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <title>User Registration Form</title>
+  <link rel="stylesheet" type="text/css" href="reg.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="navbar-heading">Welcome</h1>
+      </nav>
+  <div class="container">
+    <h1>User Registration</h1>
+    <form id="registrationForm" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <div class="container1">
+    <h1>Add Product</h1>
+    <form id="addProductForm" onsubmit="return validateForm1()">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" required>
+
+      <!-- <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">Select a category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Home & Kitchen">Home & Kitchen</option>
+        <option value="Toys & Games">Toys & Games</option>
+      </select> -->
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" min="0.01" step="0.01" required>
+
+      <!-- <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" required> -->
+
+      <button type="submit">Add Product</button>
+    </form>
+  </div>
+ 
+
+  
+    <div class="container2">
+      <h1>Edit Product</h1>
+      <form id="editProductForm" onsubmit="return validateForm()">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+  
+        <!-- <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="">Select a category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Home & Kitchen">Home & Kitchen</option>
+          <option value="Toys & Games">Toys & Games</option>
+        </select> -->
+  
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+  
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" min="0.01" step="0.01" required>
+  
+        <!-- <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required> -->
+  
+        <button type="submit">Update Product</button>
+      </form>
+    </div>
+   
+
+  <div class="container3">
+    <h1>Delete Product</h1>
+    <form id="deleteProductForm" onsubmit="return confirmDeletion()">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" required>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="confirmationCheckbox" required>
+        <label for="confirmationCheckbox">I confirm that I want to delete this product.</label>
+      </div>
+
+      <button type="submit">Delete Product</button>
+    </form>
+  </div>
+ 
+
+    <div class="container4">
+      <h1>Payment Method</h1>
+      <form id="paymentMethodForm" onsubmit="return validateFormm()">
+        <label for="paymentMethodType">Payment Method Type:</label>
+        <select id="paymentMethodType" name="paymentMethodType" required>
+          <option value="">Select a payment method type</option>
+          <option value="Credit Card">Credit Card</option>
+          <option value="PayPal">PayPal</option>
+          <option value="Bank Transfer">Bank Transfer</option>
+        </select>
+  
+        <label for="cardholderName">Cardholder Name:</label>
+        <input type="text" id="cardholderName" name="cardholderName" required>
+  
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+  
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="text" id="expiryDate" name="expiryDate" required>
+  
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+  
+        <button type="submit">Submit Payment Method</button>
+      </form>
+    </div>
+   
+
+  <script src="reg.js"></script>
+</body>
+</html>
